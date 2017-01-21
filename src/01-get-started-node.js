@@ -9,7 +9,7 @@ import {
 	clickObservableSample
 } from './01-get-started.js';
 
-// numObservableSample();
+numObservableSample();
 // stringObservableSample();
 // higherOrderObservableSample();
 // clickObservableSample();

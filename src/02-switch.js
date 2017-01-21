@@ -4,7 +4,7 @@
 /* eslint capitalized-comments: 0 */
 
 // flatten a higher order observable with RxJS switch
-// flattening
+// flattening is done from higher order observable to first order observable
 // Observable<Observable<number>> ---> Observable<number>
 
 import Rx from 'rxjs';
@@ -24,3 +24,5 @@ export const switchSample = () => {
 		x => console.log(x)
 	);
 };
+
+switchSample();

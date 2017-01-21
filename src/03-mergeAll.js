@@ -4,7 +4,7 @@
 /* eslint capitalized-comments: 0 */
 
 // flatten a higher order observable with mergeAll in RxJS
-// flattening
+// flattening is done from higher order observable to first order observable
 // Observable<Observable<number>> ---> Observable<number>
 
 import Rx from 'rxjs';
@@ -23,3 +23,5 @@ export const mergeAllSample = () => {
 		x => console.log(x)
 	);
 };
+
+mergeAllSample();

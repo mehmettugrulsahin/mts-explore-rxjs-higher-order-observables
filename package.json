@@ -2,12 +2,12 @@
   "name": "mts-explore-rxjs-higher-order-observables",
   "version": "1.0.0",
   "description": "mts-explore-rxjs-higher-order-observables",
-  "main": "index.js",
   "scripts": {
     "lint": "eslint src",
-    "dev": "npm run lint && nodemon --exec babel-node src/index.js",
+    "dev": "npm run lint && nodemon --exec babel-node src/01-get-started-node",
     "prestart": "babel src --out-dir dist",
-    "start": "node dist/index.js"
+    "start": "node dist/01-get-started-node",
+    "build": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,13 @@
   "homepage": "https://github.com/mehmettugrulsahin/mts-explore-rxjs-higher-order-observables#readme",
   "devDependencies": {
     "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
+    "babel-loader": "^6.2.10",
     "babel-preset-es2015": "^6.22.0",
     "eslint": "^3.14.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "webpack": "^1.14.0"
   },
   "dependencies": {
     "rxjs": "^5.0.3"
