@@ -3,23 +3,22 @@
 /* eslint no-unused-vars: 0 */
 /* eslint capitalized-comments: 0 */
 
-// flatten a higher order observable with RxJS switch
+// Flatten a higher order observable with RxJS switch
 
 import Rx from 'rxjs';
 
-export const switchSample = () => {
+export const mergeAllSample = () => {
 	const clickObservable = Rx.Observable.fromEvent(document, 'click');
 
 	// flattening
 	// Observable<Observable<number>> ---> Observable<number>
 
-	// switch() 
-	// allows only one inner observable
-	// by unsubscribing from the current observable 
-	// and subscribing to the next one
+	// mergeAll(3) 
+	// allows several inner observables
+	// 3 is Number of inner observables
 	const clockObservable = clickObservable.map(
 		click => Rx.Observable.interval(1000)
-	).switch();
+	).mergeAll(3);
 
 	clockObservable.subscribe(
 		x => console.log(x)
