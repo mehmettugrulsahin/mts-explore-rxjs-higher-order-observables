@@ -3,21 +3,19 @@
 /* eslint no-unused-vars: 0 */
 /* eslint capitalized-comments: 0 */
 
-// flatten a higher order observable with mergeAll in RxJS
+// flatten a higher order observable with concatAll in RxJS
 // flattening
 // Observable<Observable<number>> ---> Observable<number>
 
 import Rx from 'rxjs';
 
-export const mergeAllSample = () => {
+export const concatAllSample = () => {
 	const clickObservable = Rx.Observable.fromEvent(document, 'click');
 
-	// mergeAll(3) 
-	// allows several concurrent inner observables
-	// 3 is maximum mumber of concurrent inner observables
+	// equivalent of mergeAll(1)
 	const clockObservable = clickObservable.map(
-		click => Rx.Observable.interval(1000)
-	).mergeAll(3);
+		click => Rx.Observable.interval(1000).take(5)
+	).concatAll();
 
 	clockObservable.subscribe(
 		x => console.log(x)

@@ -4,14 +4,13 @@
 /* eslint capitalized-comments: 0 */
 
 // flatten a higher order observable with RxJS switch
+// flattening
+// Observable<Observable<number>> ---> Observable<number>
 
 import Rx from 'rxjs';
 
 export const switchSample = () => {
 	const clickObservable = Rx.Observable.fromEvent(document, 'click');
-
-	// flattening
-	// Observable<Observable<number>> ---> Observable<number>
 
 	// switch() 
 	// allows only one inner observable
