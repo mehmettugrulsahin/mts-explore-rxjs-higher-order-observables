@@ -3,7 +3,7 @@
 /* eslint no-unused-vars: 0 */
 /* eslint capitalized-comments: 0 */
 
-// use RxJS switchMap to map and flatten higher order observables
+// Use RxJS switchMap to map and flatten higher order observables
 // most commonly used instead of manually mapping to a higher order observable 
 // and then switching to flatten
 // most commonly used for requests and responses to the server

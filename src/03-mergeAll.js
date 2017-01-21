@@ -3,7 +3,7 @@
 /* eslint no-unused-vars: 0 */
 /* eslint capitalized-comments: 0 */
 
-// flatten a higher order observable with mergeAll in RxJS
+// Flatten a higher order observable with mergeAll in RxJS
 // flattening is done from higher order observable to first order observable
 // Observable<Observable<number>> ---> Observable<number>
 

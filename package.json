@@ -13,9 +13,24 @@
     "type": "git",
     "url": "git+https://github.com/mehmettugrulsahin/mts-explore-rxjs-higher-order-observables.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "rxjs",
+    "webpack",
+    "babel"
+  ],
+  "author": {
+    "name": "Mehmet Tuğrul Şahin",
+    "url": "https://github.com/mehmettugrulsahin",
+    "email": "mehmettugrulsahin@gmail.com"
+  },
+  "contributors": [
+    {
+      "name": "Mehmet Tuğrul Şahin",
+      "url": "https://github.com/mehmettugrulsahin",
+      "email": "mehmettugrulsahin@gmail.com"
+    }
+  ],
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mehmettugrulsahin/mts-explore-rxjs-higher-order-observables/issues"
   },
