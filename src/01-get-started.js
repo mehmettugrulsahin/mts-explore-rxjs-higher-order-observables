@@ -2,6 +2,8 @@
 /* eslint prefer-template: 0 */
 /* eslint no-unused-vars: 0 */
 
+// Get started with higher order observables in RxJS
+
 import Rx from 'rxjs';
 
 export const numObservableSample = () => {		
@@ -39,5 +41,7 @@ export const clickObservableSample = () => {
 		click => Rx.Observable.interval(1000)
 	);
 
-	clockObservable.subscribe(clock => clock.subscribe(x => console.log(x)));
+	clockObservable.subscribe(
+		clock => clock.subscribe(
+			x => console.log(x)));
 };
