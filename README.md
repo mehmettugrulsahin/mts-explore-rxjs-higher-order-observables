@@ -7,3 +7,4 @@
 ## Use RxJS switchMap to map and flatten higher order observables
 ## Use RxJS mergeMap / flatMap to map and merge high order observables
 ## Use RxJS concatMap to map and concat high order observables
+## Use RxJS mergeMap for fine-grain custom behavior

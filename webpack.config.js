@@ -8,7 +8,8 @@ module.exports = {
     '04-concatAll': './src/04-concatAll.js',
     '05-switchMap': './src/05-switchMap.js',
     '06-mergeMap': './src/06-mergeMap.js',
-    '07-concatMap': './src/07-concatMap.js'
+    '07-concatMap': './src/07-concatMap.js',
+    '08-mergeMap-fineGrain': './src/08-mergeMap-fineGrain.js'
   },
 	output: {
     path: 'dist',
