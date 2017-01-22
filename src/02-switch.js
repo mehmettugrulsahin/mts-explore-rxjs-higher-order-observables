@@ -10,18 +10,21 @@
 import Rx from 'rxjs';
 
 export const switchSample = () => {
-	const clickObservable = Rx.Observable.fromEvent(document, 'click');
+	const clickObservable = Rx.Observable.
+		fromEvent(document, 'click');
 
 	// switch() 
 	// allows only one inner observable
 	// by unsubscribing from the current observable 
 	// and subscribing to the next one
-	const clockObservable = clickObservable.map(
-		click => Rx.Observable.interval(1000)
-	).switch();
+	const clockObservable = clickObservable.
+		map(click => 
+			Rx.Observable.interval(1000)).
+		switch();
 
-	clockObservable.subscribe(
-		x => console.log(x)
+	clockObservable.
+		subscribe(x => 
+			console.log(x)
 	);
 };
 

@@ -11,16 +11,25 @@
 
 import Rx from 'rxjs';
 
+const performRequest = () =>
+	fetch('https://jsonplaceholder.typicode.com/users/1').
+		then(res => res.json());
+
 export const switchMapSample = () => {
-	const clickObservable = Rx.Observable.fromEvent(document, 'click');
+	const clickObservable = Rx.Observable.
+		fromEvent(document, 'click');
 
 	// switch map does map and then switch
-	const clockObservable = clickObservable.switchMap(
-		click => Rx.Observable.interval(1000).take(5)
+	// Observable<Even> -> Observable<Response>
+	// not an observable of promise but an observable of response
+	const responseObservable = clickObservable.
+		switchMap(click => 
+			Rx.Observable.fromPromise(performRequest())
 	);
 
-	clockObservable.subscribe(
-		x => console.log(x)
+	responseObservable.
+		subscribe(x => 
+			console.log(x.email)
 	);
 };
 

@@ -10,12 +10,14 @@
 import Rx from 'rxjs';
 
 export const concatAllSample = () => {
-	const clickObservable = Rx.Observable.fromEvent(document, 'click');
+	const clickObservable = Rx.Observable.
+		fromEvent(document, 'click');
 
 	// equivalent of mergeAll(1)
-	const clockObservable = clickObservable.map(
-		click => Rx.Observable.interval(1000).take(5)
-	).concatAll();
+	const clockObservable = clickObservable.
+		map(click => 
+			Rx.Observable.interval(1000).take(5)).
+		concatAll();
 
 	clockObservable.subscribe(
 		x => console.log(x)

@@ -7,20 +7,28 @@
 import Rx from 'rxjs';
 
 export const numObservableSample = () => {		
-	const numObservable = Rx.Observable.interval(1000).take(4);
+	const numObservable = Rx.Observable.
+		interval(1000).
+		take(4);
 
-	numObservable.subscribe(x => console.log(x));
+	numObservable.
+		subscribe(x => 
+			console.log(x));
 };
 
 export const stringObservableSample = () => {		
-	const numObservable = Rx.Observable.interval(1000).take(4);
+	const numObservable = Rx.Observable.
+		interval(1000).
+		take(4);
 
-	const stringObservable = numObservable.map(
-		x => 'hello' + x
+	const stringObservable = numObservable.
+	map(x => 
+		'hello' + x
 	);
 
-	stringObservable.subscribe(
-		x => console.log(x)
+	stringObservable.
+		subscribe(x => 
+			console.log(x)
 	);
 };
 

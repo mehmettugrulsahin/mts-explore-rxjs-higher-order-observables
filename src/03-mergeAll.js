@@ -10,17 +10,19 @@
 import Rx from 'rxjs';
 
 export const mergeAllSample = () => {
-	const clickObservable = Rx.Observable.fromEvent(document, 'click');
+	const clickObservable = Rx.Observable.
+		fromEvent(document, 'click');
 
 	// mergeAll(3) 
 	// allows several concurrent inner observables
 	// 3 is maximum mumber of concurrent inner observables
-	const clockObservable = clickObservable.map(
-		click => Rx.Observable.interval(1000)
-	).mergeAll(3);
+	const clockObservable = clickObservable.
+		map(click => Rx.Observable.interval(1000)).
+		mergeAll(3);
 
-	clockObservable.subscribe(
-		x => console.log(x)
+	clockObservable.
+		subscribe(x => 
+			console.log(x)
 	);
 };
 
