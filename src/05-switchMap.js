@@ -25,6 +25,11 @@ export const switchMapSample = () => {
 	const responseObservable = clickObservable.
 		switchMap(click => 
 			Rx.Observable.fromPromise(performRequest())
+
+		// switchMap converts promises to observables 
+		// allowing the following
+		// switchMap(click => 
+		// 	performRequest()
 	);
 
 	responseObservable.
